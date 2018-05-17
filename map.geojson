@@ -14,7 +14,7 @@
         "description": "Commonland was founded in 2013 with the ambition to kick-start a landscape restoration \neconomy based on the 4 returns framework. With the support of the COmON Foundation, \nCommonland was able to develop landscape restoration projects in four countries, to \nstart educating the next generation of business leaders and to build a core team. Within \nthis short period Commonland has earned an international reputation as an innovative \nchange maker. In the coming five years Commonland will enter a new phase as a mature \norganization that demonstrates that the 4 returns framework can be implemented at scale, \nby inspiring and working together with others. Commonland aims to further realize its \nproject activities on the ground, increase its client-based partnerships, continue business \neducation, and work on outreach and acquisition of funding for all our activities. The \nCommonland Foundation is the engine to make this all happen. We aim to further build \nand strengthen the organisation, creating resilient teams, structures and processes to \noptimize all of our partnerships."
       },
       "geometry": {
-        "type": "Point",
+        "type": "Polygon",
         "coordinates": [
           4.8852656,
           52.4046722
@@ -34,7 +34,7 @@
         "description": "A unique transformation is taking place in the Altiplano in southern Spain: hundreds of farmers and entrepreneurs are organizing themselves to realize the restoration of 630,000 hectares of degraded lands.\n\nTogether with association AlVelAl, Commonland developed a large-scale 4 returns landscape restoration plan for the region, which will be implemented in the coming years. One of the aspects of the restoration plan is the almendrehesa concept: an integrated production system which combines almond and local trees with aromatic oil crops, beekeeping, and sustainable grazing of the endemic lamb species. This productive ecosystem decreases erosion, restores water balance, enhances biodiversity, and beautifies the landscape. Altogether, this enhances the local economy while promoting local pride and inspiration. \n\nNext to that, over 30 business cases with the potential to contribute to landscape restoration have been identified and we are establishing several demo farms and a research center to support capacity building and demonstrate the economic potential of the almendrehesa concept. "
       },
       "geometry": {
-        "type": "Point",
+        "type": "Polygon",
         "coordinates": [
           -2.8241846,
           37.8528901
