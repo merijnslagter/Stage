@@ -48,7 +48,7 @@ body {
 #chapter {
     position: absolute;
     z-index: 999;
-    margin: 10px;
+    margin: 0px;
     display: block;
     text-align: center;
     color: #fff;
@@ -73,8 +73,8 @@ h3 {
 .image-container {
     /* margin + padding = imageContainerMargin in script.js */
     /* Important for scrolling! */
-    margin: 160px 0 0 0;
-    padding: 40px 0 0 0;
+    margin: 200px 0 0 0;
+    padding: 00px 0 0 0;
     text-align: center;
 }
 
@@ -94,15 +94,15 @@ h3 {
 
 .img-holder {
     margin: 0px;
-    height: 300px;
-    max-height: 300px;
+    height: 500px;
+    max-height: 500px;
     width: 100%;
 }
 
 .title-text {
     font-weight: bold;
     text-align: center;
-    margin: 10px;
+    margin: 0px;
 }
 
 .chapter-header {
@@ -113,17 +113,17 @@ h3 {
 
 .source {
     font-size: 9pt;
-    margin: 20px;
+    margin: 0px;
 }
 
 .description {
-    margin: 20px;
+    margin: 0px;
 }
 
 p.description {
     text-align: left;
     font-size: 11pt;
-    padding: 20px;
+    padding: 0px;
 }
 
 .inFocus {
