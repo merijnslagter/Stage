@@ -5,35 +5,15 @@
       "type": "Feature",
       "properties": {
         "id": 1,
-        "chapter": "Commonland",
-        "zoom": 10,
-        "alt": "Commonland logo",
-        "image": "img/commonland.jpg",
-        "source-credit": "Source: Commonland",
-        "source-link": "https://www.commonland.com",
-        "description": "Commonland was founded in 2013 with the ambition to kick-start a landscape restoration \neconomy based on the 4 returns framework. With the support of the COmON Foundation, \nCommonland was able to develop landscape restoration projects in four countries, to \nstart educating the next generation of business leaders and to build a core team. Within \nthis short period Commonland has earned an international reputation as an innovative \nchange maker. In the coming five years Commonland will enter a new phase as a mature \norganization that demonstrates that the 4 returns framework can be implemented at scale, \nby inspiring and working together with others. Commonland aims to further realize its \nproject activities on the ground, increase its client-based partnerships, continue business \neducation, and work on outreach and acquisition of funding for all our activities. The \nCommonland Foundation is the engine to make this all happen. We aim to further build \nand strengthen the organisation, creating resilient teams, structures and processes to \noptimize all of our partnerships."
+        "zoom": 14,
+        "layer": "layer/layer1.geojson",
+        "image": "img/1.png"
       },
       "geometry": {
-        "type": "Polygon",
+        "type": "Point",
         "coordinates": [
-          [
-            [
-              4.9357303,
-              52.2789565
-            ],
-            [
-              4.9347303,
-              52.2386565
-            ],
-            [
-              4.9257303,
-              52.2783565
-            ],
-            [
-              4.9357303,
-              52.2789565
-            ]
-          ]
+          5.666523500490734,
+          51.9875047419139
         ]
       }
     },
@@ -41,35 +21,125 @@
       "type": "Feature",
       "properties": {
         "id": 2,
-        "chapter": "Wijland in The Netherlands",
-        "zoom": 10,
-        "alt": "Dutch landscape",
-        "image": "img/netherlands.jpg",
-        "source-credit": "Source: Commonland",
-        "source-link": "https://www.commonland.com",
-        "description": "Peat meadowlands are typical Dutch landscapes. They are home to the scenery of windmills, cows in the meadows, (migrating) bird populations and a showcase of our water management reputation.\n\nHowever, during the last three decades, these lands have experienced degradation through intensification and scaling of farming and systemic drainage & dewatering. This has greatly deteriorated the natural capital in the peat-meadow lands, causing systemic subsidence (with rising sea-levels) and has a high emission/climate impact. Furthermore, the average farmer family can barely make a living. A transition is greatly and clearly needed.\n\nRaising water tables is needed to conserve and restore the natural capital and prevent further soil subsidence and degradation. But this will have adverse impact on the current farming model. Additional and alternative revenue models must therefore be developed, ranging from sustainable livestock management to direct trade, from nutrient recycling to paludiculture and more.\n\nThe landscape area is situated in the west of the country, surrounding urban conglomerates like Amsterdam, Zaanstad, Hilversum and Utrecht. Here, we are working with local partners to develop and realize alternative forms of land use that, apart from generating income to landowners and farmers, also contribute to improved biodiversity & water quality and systemically reduce further subsidence. By doing so, we believe we can transform these ‘green deserts’ into a source of pride, value and nature for farmers, citizens and businesses. The Dutch are famous for transforming their landscapes and in this area it’s time for the next phase."
+        "chapter": "2",
+        "zoom": 9,
+        "layer": "layer/layer2.geojson",
+        "image": "img/2.png"
       },
       "geometry": {
-        "type": "Polygon",
+        "type": "Point",
         "coordinates": [
-          [
-            [
-              4.8357303,
-              52.2789565
-            ],
-            [
-              4.7347303,
-              52.4786565
-            ],
-            [
-              4.8287303,
-              52.0183565
-            ],
-            [
-              4.8357303,
-              52.2789565
-            ]
-          ]
+          4.865826049599654,
+          52.32428625420838
+
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 3,
+        "chapter": "3",
+        "zoom": 13,
+        "layer": "layer/layer3.geojson",
+        "image": "img/3.png"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+         4.938153596188425,
+          52.27860431562248
+
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 4,
+        "chapter": "4",
+        "zoom": 15,
+        "layer": "layer/layer4.geojson",
+        "image": "img/4.png"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.905078829476112,
+          52.250913044867225
+
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 5,
+        "chapter": "5",
+        "zoom": 15,
+        "layer": "layer/layer5.geojson",
+        "image": "img/5.png"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.058996589221653,
+          52.235832928106525
+
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 6,
+        "chapter": "6",
+        "zoom": 16,
+        "layer": "layer/layer6.geojson",
+        "image": "img/6.png"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.887511417173162,
+          52.40474066579215
+
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 7,
+        "chapter": "7",
+        "zoom": 15,
+        "layer": "layer/layer7.geojson",
+        "image": "img/7.png"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.814039641303923,
+          52.52896547794868
+
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 8,
+        "chapter": "8",
+        "zoom": 2,
+        "layer": "layer/layer8.geojson",
+        "image": "img/8.png"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          66.2217903,
+          13.4805972
+
         ]
       }
     }

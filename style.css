@@ -2,20 +2,19 @@ body {
     padding: 0px;
     margin: 0px;
     font-family: "Helvetica", sans-serif;
-    overflow: hidden;
 }
 
 #map {
     position: absolute;
     left: 0;
-    width: 70vw;
+    width: 40vw;
     height: 100vh;
     z-index: 1;
 }
 
 #narration {
     position: absolute;
-    width: 30vw;
+    width: 60vw;
     min-width: 300px;
     right: 0px;
     height: 100vh;
@@ -60,7 +59,7 @@ body {
     right: 0px;
     top: 0px;
     background-color: white;
-    width: 30vw;
+    width: 60vw;
     min-width: 300px;
     z-index: 100;
     margin: 0px;
@@ -74,8 +73,8 @@ h3 {
 .image-container {
     /* margin + padding = imageContainerMargin in script.js */
     /* Important for scrolling! */
-    margin: 50px 0 0 0;
-    padding: 20px 0 0 0;
+    margin: 70px 0 0 0;
+    padding: 40px 0 0 0;
     text-align: center;
 }
 
@@ -95,8 +94,8 @@ h3 {
 
 .img-holder {
     margin: 0px;
-    height: 200px;
-    max-height: 200px;
+    height: 300px;
+    max-height: 300px;
     width: 100%;
 }
 
@@ -119,6 +118,9 @@ h3 {
 
 .description {
     margin: 20px;
+}
+
+p.description {
     text-align: left;
     font-size: 11pt;
     padding: 20px;
@@ -132,32 +134,4 @@ h3 {
 .outFocus {
     opacity: 0.3;
     background-color: white;
-}
-
-@media only screen and (max-device-width: 480px) {
-  ::-webkit-scrollbar {
-      display: none;
-  }
-  #map {
-    width: 100vw;
-  }
-  #title {
-    width: 80%;
-    left: 10%;
-    min-width: 0;
-  }
-  #narration {
-    width: 80%;
-    min-width: 0;
-    left: 10%;
-    background: none;
-    opacity: 0.8;
-  }
-  .description {
-      padding: 0;
-      padding-bottom: 10px;
-  }
-  .leaflet-control-container {
-      display: none;
-  }
 }

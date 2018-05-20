@@ -1,18 +1,32 @@
-var imageContainerMargin = 70;  // Margin + padding
-
-// This watches for the scrollable container
+var imageContainerMargin = 110;  // Margin + padding
+var currentBox = 0;
 var scrollPosition = 0;
+var myStyle = {
+    "color": "#f9ed32",
+    "weight": 5,
+    "opacity": 0.8,
+    "fillOpacity": 0.0
+}
+// This watches for the scrollable container
 $('div#contents').scroll(function() {
   scrollPosition = $(this).scrollTop();
 });
 
-function initMap() {
+// This adds data as a new layer to the map
+function refreshLayer(data, map, coord, zoom) {
+  var dataLayer = L.geoJson(data,{
+    style: myStyle
+});
+  dataLayer.addTo(map);
+  map.setView([coord[1], coord[0]], zoom);
+}
 
-  // This creates the Leaflet map with a generic start point, because code at bottom automatically fits bounds to all markers
+function initMap() {
+  // This creates the Leaflet map with a generic start point, because GeoJSON layer includes all coordinates
   var map = L.map('map', {
     center: [0, 0],
-    zoom: 5,
-    scrollWheelZoom: false
+    zoom: 7,
+    scrollWheelZoom: true
   });
 
   // This displays a base layer map (other options available)
@@ -22,21 +36,13 @@ function initMap() {
 
   // This customizes link to view source code; add your own GitHub repository
   map.attributionControl
-  .setPrefix('View <a href="https://github.com/Wijland/WijlandStoryMap" target="_blank">code on GitHub</a>, created with <a href="http://leafletjs.com" title="A JS library for interactive maps">Leaflet</a>');
+  .setPrefix('View <a href="http://github.com/jackdougherty/leaflet-storymap-layers" target="_blank">code on GitHub</a>, created with <a href="http://leafletjs.com" title="A JS library for interactive maps">Leaflet</a>');
 
   // This loads the GeoJSON map data file from a local folder
   $.getJSON('map.geojson', function(data) {
     var geojson = L.geoJson(data, {
       onEachFeature: function (feature, layer) {
         (function(layer, properties) {
-          // This creates numerical icons to match the ID numbers
-          // OR remove the next 6 lines for default blue Leaflet markers
-          var numericMarker = L.ExtraMarkers.icon({
-            icon: 'fa-number',
-            number: feature.properties['id'],
-            markerColor: 'blue'
-          });
-          layer.setIcon(numericMarker);
 
           // This creates the contents of each chapter from the GeoJSON data. Unwanted items can be removed, and new ones can be added
           var chapter = $('<p></p>', {
@@ -45,8 +51,7 @@ function initMap() {
           });
 
           var image = $('<img>', {
-            alt: feature.properties['alt'],
-            src: feature.properties['image']
+            src: feature.properties['image'],
           });
 
           var source = $('<a>', {
@@ -72,7 +77,7 @@ function initMap() {
 
           imgHolder.append(image);
 
-          container.append(chapter).append(imgHolder).append(source).append(description);
+          container.append(imgHolder);
           $('#contents').append(container);
 
           var i;
@@ -88,27 +93,46 @@ function initMap() {
 
           $('div#contents').scroll(function() {
             if ($(this).scrollTop() >= areaTop && $(this).scrollTop() < areaBottom) {
-              $('.image-container').removeClass("inFocus").addClass("outFocus");
-              $('div#container' + feature.properties['id']).addClass("inFocus").removeClass("outFocus");
+              if (feature.properties['id'] != currentBox) {
+                currentBox = feature.properties['id'];
 
-              map.flyTo([feature.geometry.coordinates[1], feature.geometry.coordinates[0] ], feature.properties['zoom']);
+                $('.image-container').removeClass("inFocus").addClass("outFocus");
+                $('div#container' + feature.properties['id']).addClass("inFocus").removeClass("outFocus");
+
+                
+		
+		// This removes all layers besides the base layer
+                map.eachLayer(function (layer) {
+                  if (layer != lightAll) {
+                    map.removeLayer(layer);
+		    
+                  }
+                });
+
+		 
+		 
+                // This adds another data layer
+                $.getJSON(feature.properties['layer'], function(data) {
+                  var coord = feature.geometry['coordinates'];
+                  var zoom = feature.properties['zoom'];
+		 refreshLayer(data, map, coord, zoom);
+                });
+		
+		
+              }
             }
-          });
-
-          // Make markers clickable
-          layer.on('click', function() {
-            $("div#contents").animate({scrollTop: areaTop + "px"});
           });
 
         })(layer, feature.properties);
       }
     });
 
-    $('div#container1').addClass("inFocus");
     $('#contents').append("<div class='space-at-the-bottom'><a href='#space-at-the-top'><i class='fa fa-chevron-up'></i></br><small>Top</small></a></div>");
-    map.fitBounds(geojson.getBounds());
-    geojson.addTo(map);
+
   });
 }
 
+
 initMap();
+
+$("div#contents").animate({ scrollTop: 5 });
