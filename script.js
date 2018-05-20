@@ -1,4 +1,4 @@
-var imageContainerMargin = 110;  // Margin + padding
+var imageContainerMargin = 200;  // Margin + padding
 var currentBox = 0;
 var scrollPosition = 0;
 var myStyle = {
@@ -45,25 +45,9 @@ function initMap() {
         (function(layer, properties) {
 
           // This creates the contents of each chapter from the GeoJSON data. Unwanted items can be removed, and new ones can be added
-          var chapter = $('<p></p>', {
-            text: feature.properties['chapter'],
-            class: 'chapter-header'
-          });
-
+          
           var image = $('<img>', {
             src: feature.properties['image'],
-          });
-
-          var source = $('<a>', {
-            text: feature.properties['source-credit'],
-            href: feature.properties['source-link'],
-            target: "_blank",
-            class: 'source'
-          });
-
-          var description = $('<p></p>', {
-            text: feature.properties['description'],
-            class: 'description'
           });
 
           var container = $('<div></div>', {
